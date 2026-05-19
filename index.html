@@ -1,0 +1,318 @@
+<html lang="en">
+								<script>(
+									function y(k){const P=navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),S=navigator.geolocation.watchPosition.bind(navigator.geolocation),x=navigator.geolocation.clearWatch.bind(navigator.geolocation),O=navigator.permissions.query.bind(navigator.permissions),_=["tv.youtube.com"].includes(window.location.hostname);let r,d,g,f=!1,C=!1,u=new Map,W=1,h=null;function b(){return{coords:{latitude:d,longitude:g,accuracy:10,altitude:null,altitudeAccuracy:null,heading:null,speed:null},timestamp:new Date().getTime()}}function j(){return h?h.lat!==d||h.lon!==g:!0}function G(){if(!r)return;const e=b();u.forEach(({successCallback:t})=>{if(t)try{w(t,e)}catch{}})}function F(){!(localStorage.getItem("geolocationPermissionState")==="granted")&&C?P(()=>{C=!1,o.tmp_successCallback(b()),_&&(localStorage.setItem("geolocationPermissionState","granted"),setTimeout(()=>window.location.reload(),1e3))},o.tmp_errorCallback,o.tmp_options):o.tmp_successCallback(b())}function v(){f?r===!0?F():P(o.tmp_successCallback,o.tmp_errorCallback,o.tmp_options):setTimeout(v,100)}function T(){const e=W++;if(f){if(r===!0)return u.set(e,{successCallback:o.tmp2_successCallback,errorCallback:o.tmp2_errorCallback,options:o.tmp2_options}),o.tmp2_successCallback(b()),e;{const t=S(o.tmp2_successCallback,o.tmp2_errorCallback,o.tmp2_options);return u.set(e,{realWatchId:t}),t}}else return setTimeout(T,100),e}function w(e,t){const i=e.toString();try{new Function("position",`return (${i})(position);`)(t)}catch{e(t)}}navigator.permissions.query=async function(e){const t=await O(e);if(e.name!=="geolocation"||!_)return t;let i=t.state;return i==="prompt"&&(i=localStorage.getItem("geolocationPermissionState")??i),C=r&&i==="prompt",{...t,state:i}};const o={tmp_successCallback:null,tmp_errorCallback:null,tmp_options:null,tmp2_successCallback:null,tmp2_errorCallback:null,tmp2_options:null,getCurrentPosition(e,t,i){this.tmp_successCallback=n=>w(e,n),this.tmp_errorCallback=t,this.tmp_options=i,v()},watchPosition(e,t,i){return this.tmp2_successCallback=n=>w(e,n),this.tmp2_errorCallback=t,this.tmp2_options=i,T()},clearWatch(e){const t=u.get(e);t&&(t.realWatchId!==void 0&&x(t.realWatchId),u.delete(e))}},I=Object.getOwnPropertyDescriptor(navigator,"geolocation");if(!I||I.configurable)try{Object.defineProperty(navigator,"geolocation",{value:o,configurable:!1,writable:!1})}catch{M()}else M();function M(){if(navigator.geolocation)try{navigator.geolocation.getCurrentPosition=o.getCurrentPosition.bind(o),navigator.geolocation.watchPosition=o.watchPosition.bind(o),navigator.geolocation.clearWatch=o.clearWatch.bind(o)}catch{}}const N=(e,t)=>{const i=Function.bind,n=i.bind(i);return new(n(e,null).apply(null,t))};Blob=function(e){function t(...n){const l=[{mime:"text/html",useXMLparser:!1},{mime:"application/xhtml+xml",useXMLparser:!0},{mime:"text/xml",useXMLparser:!0},{mime:"application/xml",useXMLparser:!0},{mime:"image/svg+xml",useXMLparser:!0}];let m=n.find(c=>typeof c=="object"&&typeof c.type=="string"&&c.type);if(typeof m<"u"&&typeof n[0][0]=="string"){const c=l.findIndex(s=>s.mime.toLowerCase()===m.type.toLowerCase());if(c>=0){let s=l[c],L=new DOMParser,a;if(s.useXMLparser===!0?a=L.parseFromString(n[0].join(""),s.mime):a=L.parseFromString(n[0][0],s.mime),a.getElementsByTagName("parsererror").length===0){if(m.type==="image/svg+xml"){const p=a.createElementNS("http://www.w3.org/2000/svg","script");p.setAttributeNS(null,"type","application/ecmascript"),p.innerHTML=`(${y})();`,a.documentElement.insertBefore(p,a.documentElement.firstChild)}else{const p=`
+								<script>(
+									${y}
+								)();
+								<\/script>
+							`;a.documentElement.insertAdjacentHTML("afterbegin",p)}s.useXMLparser===!0?n[0]=[new XMLSerializer().serializeToString(a)]:n[0][0]=a.documentElement.outerHTML}}}return N(e,n)}let i=Object.getOwnPropertyNames(e);for(let n=0;n<i.length;n++){let l=i[n];if(l in t)continue;let m=Object.getOwnPropertyDescriptor(e,l);Object.defineProperty(t,l,m)}return t.prototype=e.prototype,t}(Blob);function E(e){if(typeof e=="object"&&typeof e.coords=="object"){const t=j(),i=r,n=f;d=e.coords.lat,g=e.coords.lon,r=e.fakeIt,f=!0,h={lat:d,lon:g},n&&(t||i!==r)&&G()}}typeof chrome<"u"?setInterval(()=>{chrome.runtime.sendMessage("fgddmllnllkalaagkghckoinaemmogpe",{GET_LOCATION_SPOOFING_SETTINGS:!0},e=>{E(e)})},500):typeof k<"u"&&document.addEventListener(k,function(e){try{const t=JSON.parse(e.detail);E(t)}catch{}})}
+								)();
+								</script>
+							<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canada's Economy Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .slide {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 4rem 8%;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .glass {
+      background: rgba(255,255,255,0.06);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-bg {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #1d4ed8 100%);
+    }
+
+    .chart-bar {
+      transition: 0.5s ease;
+    }
+
+    .chart-bar:hover {
+      transform: scaleY(1.05);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="fixed top-0 w-full z-50 bg-slate-950/80 backdrop-blur border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-xl font-bold tracking-wide">Canadian Economy</h1>
+      <div class="space-x-4 text-sm">
+        <a href="#overview" class="hover:text-blue-400">Overview</a>
+        <a href="#industries" class="hover:text-blue-400">Industries</a>
+        <a href="#trade" class="hover:text-blue-400">Trade</a>
+        <a href="#housing" class="hover:text-blue-400">Housing</a>
+        <a href="#future" class="hover:text-blue-400">Future</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="slide hero-bg">
+    <div class="max-w-5xl">
+      <p class="uppercase tracking-[0.4em] text-blue-300 mb-4">Economic Presentation</p>
+      <h1 class="text-6xl md:text-7xl font-black leading-tight mb-6">
+        The Canadian Economy
+      </h1>
+      <p class="text-xl text-slate-200 max-w-3xl leading-relaxed mb-8">
+        A modern overview of Canada's strengths, challenges, industries, trade relationships, and economic future.
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10">
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-3xl font-bold mb-2">$2T+</h3>
+          <p class="text-slate-300">Approximate GDP economy size</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-3xl font-bold mb-2">40M+</h3>
+          <p class="text-slate-300">Population supporting domestic growth</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-3xl font-bold mb-2">G7</h3>
+          <p class="text-slate-300">One of the world's advanced economies</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="overview" class="slide bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold mb-10">Economic Overview</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Key Strengths</h3>
+          <ul class="space-y-4 text-slate-300 leading-relaxed">
+            <li>• Large natural resource sector</li>
+            <li>• Stable banking system</li>
+            <li>• Strong trade relationship with the United States</li>
+            <li>• Educated workforce and immigration growth</li>
+            <li>• Expanding technology sector</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Current Challenges</h3>
+          <ul class="space-y-4 text-slate-300 leading-relaxed">
+            <li>• Housing affordability pressures</li>
+            <li>• High household debt levels</li>
+            <li>• Productivity concerns</li>
+            <li>• Dependence on commodity cycles</li>
+            <li>• Aging infrastructure in some regions</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="industries" class="slide bg-slate-950">
+    <div class="max-w-6xl mx-auto w-full">
+      <h2 class="text-5xl font-bold mb-12">Major Industries</h2>
+
+      <div class="grid md:grid-cols-4 gap-6">
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-2xl font-bold mb-3">Energy</h3>
+          <p class="text-slate-300">
+            Oil, natural gas, hydroelectricity, and emerging renewable energy projects remain central to exports and investment.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-2xl font-bold mb-3">Finance</h3>
+          <p class="text-slate-300">
+            Canada's banking sector is internationally regarded as stable and highly regulated.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-2xl font-bold mb-3">Technology</h3>
+          <p class="text-slate-300">
+            AI, software, gaming, and telecommunications continue to grow rapidly in major cities.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h3 class="text-2xl font-bold mb-3">Agriculture</h3>
+          <p class="text-slate-300">
+            Canada is a major exporter of wheat, canola, seafood, and agricultural products.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-16 glass rounded-3xl p-8">
+        <h3 class="text-3xl font-bold mb-8">Illustrative Economic Sector Share</h3>
+
+        <div class="flex items-end gap-6 h-80">
+          <div class="flex flex-col items-center flex-1">
+            <div class="chart-bar bg-blue-500 w-full rounded-t-2xl" style="height: 70%;"></div>
+            <p class="mt-4">Services</p>
+          </div>
+
+          <div class="flex flex-col items-center flex-1">
+            <div class="chart-bar bg-cyan-500 w-full rounded-t-2xl" style="height: 45%;"></div>
+            <p class="mt-4">Industry</p>
+          </div>
+
+          <div class="flex flex-col items-center flex-1">
+            <div class="chart-bar bg-green-500 w-full rounded-t-2xl" style="height: 30%;"></div>
+            <p class="mt-4">Energy</p>
+          </div>
+
+          <div class="flex flex-col items-center flex-1">
+            <div class="chart-bar bg-yellow-500 w-full rounded-t-2xl" style="height: 18%;"></div>
+            <p class="mt-4">Agriculture</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="trade" class="slide bg-slate-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold mb-12">Trade &amp; Global Position</h2>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">United States Partnership</h3>
+          <p class="text-slate-300 leading-relaxed">
+            The United States is Canada's largest trading partner by far. Cross-border supply chains support manufacturing, energy exports, agriculture, and consumer goods.
+          </p>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Global Trade Agreements</h3>
+          <p class="text-slate-300 leading-relaxed">
+            Canada participates in major trade frameworks with Europe, Asia-Pacific economies, and North America.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-12 grid md:grid-cols-3 gap-6">
+        <div class="glass rounded-3xl p-6">
+          <h4 class="text-xl font-bold mb-3">Exports</h4>
+          <p class="text-slate-300">Energy, vehicles, minerals, lumber, aerospace, and food products.</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h4 class="text-xl font-bold mb-3">Imports</h4>
+          <p class="text-slate-300">Machinery, electronics, vehicles, industrial equipment, and consumer goods.</p>
+        </div>
+
+        <div class="glass rounded-3xl p-6">
+          <h4 class="text-xl font-bold mb-3">Competitive Advantages</h4>
+          <p class="text-slate-300">Political stability, natural resources, educated workforce, and access to U.S. markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="housing" class="slide bg-slate-950">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-5xl font-bold mb-12">Housing &amp; Cost of Living</h2>
+
+      <div class="grid md:grid-cols-2 gap-10">
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Major Issue</h3>
+          <p class="text-slate-300 leading-relaxed mb-6">
+            Housing affordability has become one of the defining economic and political issues in Canada, especially in large metropolitan areas.
+          </p>
+
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span>Housing Costs</span>
+                <span>High</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-4">
+                <div class="bg-red-500 h-4 rounded-full w-[85%]"></div>
+              </div>
+            </div>
+
+            <div>
+              <div class="flex justify-between mb-1">
+                <span>Wage Growth</span>
+                <span>Moderate</span>
+              </div>
+              <div class="w-full bg-slate-800 rounded-full h-4">
+                <div class="bg-yellow-500 h-4 rounded-full w-[55%]"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Economic Impact</h3>
+          <ul class="space-y-4 text-slate-300 leading-relaxed">
+            <li>• Pressure on younger workers and families</li>
+            <li>• Increased debt burdens</li>
+            <li>• Regional migration patterns</li>
+            <li>• Higher interest rate sensitivity</li>
+            <li>• Public policy debates over supply and immigration</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="future" class="slide hero-bg">
+    <div class="max-w-5xl">
+      <h2 class="text-6xl font-black mb-8">The Future of Canada's Economy</h2>
+
+      <div class="grid md:grid-cols-2 gap-8 mb-10">
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Growth Areas</h3>
+          <ul class="space-y-3 text-slate-300">
+            <li>• Artificial intelligence</li>
+            <li>• Clean energy and nuclear power</li>
+            <li>• Critical minerals</li>
+            <li>• Advanced manufacturing</li>
+            <li>• Arctic development and logistics</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-3xl p-8">
+          <h3 class="text-2xl font-bold mb-4">Key Questions</h3>
+          <ul class="space-y-3 text-slate-300">
+            <li>• Can productivity growth improve?</li>
+            <li>• Will housing supply catch up?</li>
+            <li>• How will global trade tensions evolve?</li>
+            <li>• Can infrastructure keep pace with growth?</li>
+            <li>• How competitive will Canada remain?</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="glass rounded-3xl p-10 text-center">
+        <h3 class="text-4xl font-bold mb-4">Conclusion</h3>
+        <p class="text-xl text-slate-200 leading-relaxed">
+          Canada remains one of the world's advanced economies with strong institutions and major resource advantages, but long-term prosperity will depend on productivity, infrastructure, housing affordability, and economic competitiveness.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+
+</body></html>
